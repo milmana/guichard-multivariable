@@ -1,4 +1,9 @@
+### pdflatex
 *.aux
 *.log
 *.pdf
+
+### vim
 *.swp
+*.swo
+*.swx
