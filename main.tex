@@ -5,7 +5,7 @@
 \begin{document}
 
 \title{David Guichard's Multivariable Calculus, late transcendentals}
-\author{Arsenio}
+\author{A Milman}
 \date{\today}
 \maketitle
 
@@ -14,20 +14,80 @@
 
 \section{Analytic Geometry}
 
-\subsection{Lines}
+In Euclidean \(n\)-space, the generalization of the Pythagorean theorem 
+(and hence of circles, spheres, and hyperspheres) always involves adding more 
+\emph{squared coordinate differences}, but the \emph{root itself} 
+remains a \textbf{square root}, not a cube root or higher.
 
-\begin{align}
-	\Delta x &= x_2 - x_1	\\
-	\Delta y &= y_2 - y_1	\\
-	m &= \frac{ \Delta x }{ \Delta y }
-\end{align}
+\subsection{The pattern in all dimensions}
 
-\subsection{Distance Between Two Points; Circles}
+For a center point
+\[
+\hat{\mathbf{x}} = (\hat{x}_1, \hat{x}_2, \dots, \hat{x}_n)
+\]
+and any point
+\[
+\mathbf{x} = (x_1, x_2, \dots, x_n),
+\]
+the Euclidean distance between them is
+\[
+d(\mathbf{x}, \hat{\mathbf{x}}) = 
+\sqrt{(x_1 - \hat{x}_1)^2 + (x_2 - \hat{x}_2)^2 + \dots + (x_n - \hat{x}_n)^2}.
+\]
 
-\begin{align}
-	\text{distance in } \mathbb{R}^2 &= \sqrt{(\Delta x)^2 + (\Delta y)^2}	\\
-	\text{distance in } \mathbb{R}^3 &= \sqrt{(\Delta x)^2 + (\Delta y)^2 + (\Delta z)^2}
-\end{align}
+The sphere (or hypersphere) of radius \(r\) centered at \(\hat{\mathbf{x}}\) is 
+the set of all points where
+\[
+d(\mathbf{x}, \hat{\mathbf{x}}) = r,
+\]
+that is,
+\[
+(x_1 - \hat{x}_1)^2 + (x_2 - \hat{x}_2)^2 + \dots + (x_n - \hat{x}_n)^2 = r^2.
+\]
+
+\subsection{Why the root stays square}
+
+The root remains square because Euclidean geometry measures length 
+using the \emph{2-norm} (or \(L^2\) norm):
+\[
+\|\mathbf{x}\|_2 = \sqrt{x_1^2 + x_2^2 + \dots + x_n^2}.
+\]
+The ``2'' in \(L^2\) comes from squaring the coordinates; the square root 
+undoes that squaring.
+
+If one were to use a cube root instead, that would define the 
+\(L^3\) norm:
+\[
+\|\mathbf{x}\|_3 = \sqrt[3]{|x_1|^3 + |x_2|^3 + \dots + |x_n|^3},
+\]
+but that is not the Euclidean distance. The corresponding ``unit ball'' would 
+be a rounded box, not a sphere.
+
+\subsection{Dimensional examples}
+
+\begin{center}
+\begin{tabular}{c|c|c|c}
+\textbf{Dimension \(n\)} & \textbf{Object} & \textbf{Equation} & \textbf{Shape} \\
+\hline
+1 & Interval & \( |x - \hat{x}| = r \) & Line segment \\
+2 & Circle & \( (x - \hat{x})^2 + (y - \hat{y})^2 = r^2 \) & Circle in a plane \\
+3 & Sphere & \( (x - \hat{x})^2 + (y - \hat{y})^2 + (z - \hat{z})^2 = r^2 \) & 3D sphere \\
+\(n\) & Hypersphere & \( \sum_{i=1}^n (x_i - \hat{x}_i)^2 = r^2 \) & \(n\)-dimensional surface
+\end{tabular}
+\end{center}
+
+\subsection{Summary insight}
+
+\begin{itemize}
+  \item The sum of squares reflects orthogonality in Euclidean geometry.
+  \item The square root comes from the Pythagorean theorem.
+  \item Increasing the number of dimensions adds more squared terms,
+        not higher powers or roots.
+\end{itemize}
+
+Thus, whether describing a \textbf{circle (2D)}, \textbf{sphere (3D)},
+or \textbf{hypersphere (\(n\)D)}, the defining equation always involves
+\emph{squares and a single square root}, never cubic or higher roots.
 
 
 
