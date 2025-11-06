@@ -1,5 +1,4 @@
-# calculus
-SV, MV and vector calculus notes
+# calc notes
 
 Here’s a lean, no-nonsense route that gets you to real mastery with the fewest moving parts.
 
